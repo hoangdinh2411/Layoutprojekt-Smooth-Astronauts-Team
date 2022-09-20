@@ -8,19 +8,21 @@
 body {
   display: flex;
   background-color: #e5e5e5;
+  justify-content: center;
 }
 main {
   max-width: 1000px;
   width: 100%;
-  margin: 0 auto;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
 }
 a {
   text-decoration: none;
 }
 header {
+  grid-column: 1/7;
+  grid-template-rows: auto;
   display: flex;
   height: 544px;
 }
@@ -59,7 +61,7 @@ h1 {
   color: rgba(0, 0, 0, 0.6);
   text-align: left;
 }
-.price {
+.sub-title__price {
   color: #ffffff !important;
 }
 .btn {
@@ -75,6 +77,9 @@ h1 {
   line-height: 12px;
   outline: none;
   border: none;
+}
+
+.btn-top {
   display: flex;
   text-align: center;
   align-items: center;
@@ -104,7 +109,7 @@ h1 {
   align-items: center;
   height: 50%;
 }
-.header__right__learn-more {
+.header__right__boxes--learn-more {
   background-color: #f17949;
 }
 
@@ -118,7 +123,7 @@ h1 {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.header__right__join {
+.header__right__boxes--join {
   background-color: #ffb939;
 }
 
@@ -133,6 +138,7 @@ h1 {
 }
 
 .nav-bar__container {
+  grid-column: 1/7;
   display: grid;
   height: 57px;
   margin-top: 7px;
@@ -165,21 +171,145 @@ h1 {
 }
 
 .content__container {
+  grid-column: 1/7;
   position: relative;
 }
 .content__top {
   background-color: #a9a19e;
   height: 612px;
+  display: flex;
+  justify-content: space-between;
+  padding: 103px 107px 0;
+}
+
+.content__top__container {
+  width: 314px;
+}
+.content__title {
+  font-family: "Frank Ruhl Libre";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  min-height: 101px;
+  min-width: 314px;
+}
+.content__sub-title {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.6);
+  width: 280px;
 }
 .content__bottom {
   background-color: #fab131;
   height: 680px;
+  display: flex;
+}
+
+.content__bottom__container {
+  width: 442px;
+  margin: 299px auto 101px;
+  text-align: center;
+}
+
+.content__bottom__sub-title {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .content__cards {
   position: absolute;
-  top: 50%;
+  top: 453px;
   left: 0;
   width: 100%;
-  transform: translateY(-50%);
+  min-height: 200px;
+  display: flex;
+  padding: 0 90px;
+  justify-content: space-between;
+}
+.card__container {
+  width: 256px;
+  height: 308px;
+  position: relative;
+  display: flex;
+  padding: 146px 21px 27px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+.card__content {
+  border-radius: 5px;
+  text-align: center;
+}
+
+.card__title {
+  font-family: "Frank Ruhl Libre";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.9);
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.card__sub-title {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.card__img {
+  top: -26px;
+  left: 10px;
+  position: absolute;
+  width: 236px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  border-radius: 4px;
+  overflow: hidden;
+  padding-top: 14px;
+  display: flex;
+  justify-content: center;
+}
+
+.card__img span {
+  display: block;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 161px;
+}
+.card__img--left {
+  background-color: #c7ddea;
+}
+.card__img--left span {
+  background-image: url("../img/child.png");
+  width: 96px;
+}
+.card__img--middle {
+  background-color: #fab131;
+}
+.card__img--middle span {
+  background-image: url("../img/adult.png");
+  width: 96px;
+}
+.card__img--right {
+  background-color: #f17949;
+}
+.card__img--right span {
+  background-image: url("../img/old.png");
+  width: 134px;
 }
