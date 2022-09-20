@@ -14,6 +14,8 @@ main {
   width: 100%;
   margin: 0 auto;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 a {
   text-decoration: none;
@@ -31,10 +33,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 71px;
 }
 .header__left__content {
-  width: 314px;
+  margin-top: 71px;
 }
 
 h1 {
@@ -42,6 +43,7 @@ h1 {
   font-style: normal;
   font-weight: 900;
   font-size: 45px;
+  width: 314px;
   line-height: 100%;
   height: 101px;
   letter-spacing: -0.02em;
@@ -55,6 +57,7 @@ h1 {
   font-size: 14px;
   line-height: 24px;
   color: rgba(0, 0, 0, 0.6);
+  text-align: left;
 }
 .price {
   color: #ffffff !important;
@@ -143,13 +146,12 @@ h1 {
   grid-column-end: 6;
   display: flex;
   justify-content: space-between;
-  
 }
 .nav-bar__links {
-  flex:1;
-  color:  #000000;
+  flex: 1;
+  color: #000000;
   opacity: 0.4;
-  font-family:'Fira Sans';
+  font-family: "Fira Sans";
   height: 100%;
   line-height: 57px;
   text-align: center;
@@ -158,7 +160,7 @@ h1 {
   font-size: 12px;
 }
 
-.nav-bar__links.active{
+.nav-bar__links.active {
   opacity: 1;
 }
 
