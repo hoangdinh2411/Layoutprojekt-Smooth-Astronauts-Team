@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700&family=Frank+Ruhl+Libre:wght@300;400;500;700;900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -13,7 +14,6 @@ body {
 main {
   max-width: 1000px;
   width: 100%;
-  min-height: 100vh;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
@@ -24,10 +24,12 @@ header {
   grid-column: 1/7;
   grid-template-rows: auto;
   display: flex;
-  height: 544px;
 }
 
-.header__left {
+.home-page__header {
+  height: 544px;
+}
+.home-page__header__left {
   width: 50%;
   background-color: #c7ddea;
   height: 100%;
@@ -36,7 +38,7 @@ header {
   justify-content: center;
   align-items: flex-start;
 }
-.header__left__content {
+.home-page__header__left__content {
   margin-top: 71px;
 }
 
@@ -51,7 +53,7 @@ h1 {
   letter-spacing: -0.02em;
   color: #000000;
 }
-.header__left__sub-title {
+.home-page__header__left__sub-title {
   width: 268px;
   font-family: "Fira Sans";
   font-style: normal;
@@ -77,6 +79,7 @@ h1 {
   line-height: 12px;
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
 .btn-top {
@@ -87,7 +90,7 @@ h1 {
   margin-top: 51px;
 }
 
-.header__left img {
+.home-page__header__left img {
   width: 286px;
   height: 279px;
   position: absolute;
@@ -95,25 +98,25 @@ h1 {
   right: 17px;
 }
 
-.header__right {
+.home-page__header__right {
   flex: 1;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.header__right__boxes {
+.home-page__header__right__boxes {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 50%;
 }
-.header__right__boxes--learn-more {
+.home-page__header__right__boxes--learn-more {
   background-color: #f17949;
 }
 
-.header__sub-title {
+.home-page__header__sub-title {
   font-family: "Fira Sans";
   font-style: normal;
   font-weight: 700;
@@ -123,11 +126,11 @@ h1 {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.header__right__boxes--join {
+.home-page__header__right__boxes--join {
   background-color: #ffb939;
 }
 
-.header__title {
+.home-page__header__title {
   font-family: "Frank Ruhl Libre";
   font-style: normal;
   font-weight: 900;
@@ -136,6 +139,8 @@ h1 {
   letter-spacing: -0.02em;
   color: #ffffff;
 }
+
+/* Navbar */
 
 .nav-bar__container {
   grid-column: 1/7;
@@ -174,6 +179,7 @@ h1 {
   grid-column: 1/7;
   position: relative;
 }
+
 .content__top {
   background-color: #a9a19e;
   height: 612px;
@@ -185,6 +191,11 @@ h1 {
 .content__top__container {
   width: 314px;
 }
+
+.content__bottom__container .content__title{
+  height: 101px;
+  margin: auto;
+}
 .content__title {
   font-family: "Frank Ruhl Libre";
   font-style: normal;
@@ -193,8 +204,7 @@ h1 {
   line-height: 100%;
   letter-spacing: -0.02em;
   color: #ffffff;
-  min-height: 101px;
-  min-width: 314px;
+  width: 314px;
 }
 .content__sub-title {
   font-family: "Fira Sans";
@@ -213,7 +223,7 @@ h1 {
 
 .content__bottom__container {
   width: 442px;
-  margin: 299px auto 101px;
+  margin: 225px auto 101px;
   text-align: center;
 }
 
@@ -313,3 +323,268 @@ h1 {
   background-image: url("../img/old.png");
   width: 134px;
 }
+
+footer {
+  background-color: #777574;
+  grid-column: 1/7;
+}
+
+.box__container {
+  background-color: #e5e5e5;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: stretch;
+  align-items: stretch;
+  grid-template-areas:
+    "box-0 box-0 box-1 box-1 box-2 box-2"
+    "box-3 box-3 box-4 box-4 box-5 box-5";
+}
+
+.title {
+  font-family: "Frank Ruhl Libre";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  letter-spacing: -0.02em;
+  color: rgba(0, 0, 0, 0.4);
+}
+.boxes {
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+.box__title {
+  font-family: "Frank Ruhl Libre";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 45px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.box__sub-title {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  width: 257px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.box__00 {
+  background-color: #c7ddea;
+  grid-area: box-0;
+}
+
+.box__01 {
+  grid-area: box-1;
+  background-color: #ffffff;
+}
+.box__02 {
+  grid-area: box-2;
+  background-color: #ebebeb;
+}
+.box__03 {
+  grid-area: box-3;
+  background-color: #ffffff;
+}
+.box__04 {
+  grid-area: box-4;
+  background-color: #f17949;
+}
+
+.box__05 {
+  grid-area: box-5;
+  background-color: #ffffff;
+}
+
+.footer__bottom {
+  height: 340px;
+}
+
+.footer__bottom__nav {
+  position: relative;
+  background-color: #a9a19e;
+  width: 1002px;
+  height: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.footer__nav {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  height: 31px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.footer__bottom__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  Contact form */
+
+.contact-page__header {
+  grid-column: 1/7;
+  height: 340px;
+  background-color: #c7ddea;
+  position: relative;
+  display: flex;
+}
+.contact-page__header h1 {
+  margin: auto;
+}
+
+.contact-page__header__image {
+  position: absolute;
+  right: 115px;
+  top: 42px;
+}
+
+.content--contact-page {
+  display: flex;
+  align-items: center;
+  background-color: #a9a19e;
+}
+.content--contact-page div {
+  flex: 1;
+  justify-self: left;
+  margin-top: 106px;
+  margin-bottom: 85px;
+  align-self: flex-start;
+}
+
+.content--contact-page div p {
+  margin-left: 76px;
+}
+.content--contact-page .content__title {
+  width: 314px;
+}
+.content--contact-page form {
+  width: 334px;
+  display: flex;
+  flex-direction: column;
+}
+.content--contact-page form aside {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.content--contact-page form label {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
+  opacity: 0.7;
+  height: 30px;
+  line-height: 30px;
+}
+
+.content--contact-page form input {
+  height: 40px;
+  padding: 0 18px;
+
+}
+
+.content--contact-page form textarea {
+  width: 334px;
+  height: 166px;
+  padding: 18px;
+  color: #000000;
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  resize: none;
+}
+
+.content--contact-page form textarea::placeholder {
+  color: #000000;
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.btn--form-contact {
+  margin-left: auto;
+  margin-top: 12px;
+}
+
+
+
+.map__container {
+  position: relative;
+  min-height: 407px;
+  background-image: url("../img/map-contact.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-address {
+  position: absolute;
+  top: 45px;
+  left: 86px;
+  display: flex;
+  flex-direction: column;
+  width: 323px;
+  height: 206px;
+  padding: 22px;
+  background-color: #fab131;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.map__container .content__title {
+  width: 278px;
+  height: 45px;
+}
+
+.address {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.map__container img{
+  height: 112px;
+  width: 70px;
+  object-fit: contain;
+}
+

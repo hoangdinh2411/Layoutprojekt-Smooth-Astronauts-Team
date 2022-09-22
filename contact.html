@@ -1,15 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
     <main>
-        
+      <header class="contact-page__header">
+        <h1>Oh hello there!</h1>
+        <img
+          class="contact-page__header__image"
+          src="./assets//img/man-and-child.png"
+          alt=""
+        />
+      </header>
+
+      <section class="nav-bar__container">
+        <nav class="nav-bar">
+          <a href="./index.html" class="nav-bar__links">Home</a>
+          <a href="#" class="nav-bar__links">Our offer</a>
+          <a href="#" class="nav-bar__links">Why us</a>
+          <a href="./contact.html" class="nav-bar__links active">Contact</a>
+        </nav>
+      </section>
+      <section class="content__container content--contact-page">
+        <div>
+          <p class="content__title">
+            Whats on your mind?
+          </p>
+        </div>
+        <div>
+          <form>
+            <aside>
+              <label for="email"> Your email </label>
+              <input id="email" type="email">
+            </aside>
+            <aside>
+              <label for="message"> Your message </label>
+              <textarea id="message" placeholder="Dear Insurance company..." ></textarea>
+            </aside>
+            <button class="btn btn--form-contact ">SEND MESSAGE</button>
+
+          </form>
+        </aside>
+      </section>
+      <footer >  
+        <section class="map__container">
+            <div class="map-address">
+              <p class="content__title">
+                Come visit us!
+              </p>
+              <span class="address">
+                2219 Griffin Street <br>
+                 San Fransisco
+              </span>
+            </div>
+            <img src="/assets/img/needle.png" alt="">
+        </section>
+        <section class="footer__bottom">
+        </section>
+      </footer>
+
     </main>
-</body>
+  </body>
 </html>
